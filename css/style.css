@@ -1,0 +1,381 @@
+
+/* Global Styles */
+
+@font-face {font-family: Avenir; src: url('../font/AvenirLTStd-Book.otf');}
+@font-face {font-family: Avenir-condensed; font-weight: bold; src: url('../font/Avenir-Condensed.ttc');}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+
+    font-family: Avenir,sans-serif,bold;
+}
+
+h1, h2{
+  font-family: Avenir-condensed, sans-serif, bold;
+  text-transform: uppercase;
+}
+
+.text-vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+  font-size: 4.5em;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Custom Button Styles */
+
+.btn-dark {
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
+  color: #fff;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.btn-light {
+  color: #333;
+  border: none;
+  border-radius: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-light:hover, .btn-light:focus, .btn-light:active {
+  color: #333;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+
+/* Custom Horizontal Rule */
+
+hr.small {
+  max-width: 100px;
+}
+
+
+/* Navbar Menu */
+
+.logo{
+  width:5.5%;
+}
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  height: 70px;
+}
+.navigation.scrolled {
+  background-color: black !important;
+  transition: background-color 200ms linear;
+}
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.brand a, .brand a:visited {
+  color: white;
+  text-decoration: none;
+}
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a, nav ul li a:visited {
+  display: block;
+  padding: 0 20px;
+  line-height: 70px;
+  color: white;
+  text-decoration: none;
+}
+nav ul li a:hover, nav ul li a:visited:hover {
+  color: grey;
+  text-decoration: none;
+}
+nav ul li a:not(:only-child):after, nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+nav ul li ul li {
+  min-width: 190px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 70px;
+  width: 70px;
+}
+@media only screen and (max-width: 800px) {
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 10px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+
+  .logo{
+    width:10%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* Header */
+
+
+.header {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#pjs{
+  position: absolute;
+  z-index: -1;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+}
+
+#white-text{
+  color: white;
+}
+
+/* About */
+
+.about {
+  padding: 50px 0;
+}
+
+
+/* Services */
+
+.services {
+  padding: 50px 0;
+}
+
+.service-item {
+  margin-bottom: 30px;
+}
+
+
+/* Callout */
+
+.callout {
+  display: table;
+  width: 100%;
+  height: 400px;
+  color: #fff;
+  background: url(../img/bn_1.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* Portfolio */
+
+.portfolio {
+  padding: 50px 0;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.img-portfolio {
+  margin: 0 auto;
+}
+
+.img-portfolio:hover {
+  opacity: .8;
+}
+
+.roadmap{
+  width:90%;
+
+}
+
+@media only screen and (min-width: 800px) {
+  .roadmap{
+    width:90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .roadmap{
+    width:100%;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .roadmap{
+    width:100%;
+
+  }
+}
+
+
+/* Call to Action */
+
+.call-to-action {
+  padding: 50px 0;
+}
+
+.call-to-action .btn {
+  margin: 10px;
+}
+
+
+/* Map */
+
+.map {
+  height: 500px;
+}
+
+@media(max-width:768px) {
+  .map {
+    height: 75%;
+  }
+  .logo{
+    width:15%;
+  }
+}
+
+.map iframe {
+  pointer-events: none;
+}
+
+
+/* Footer */
+
+footer {
+  padding: 100px 0;
+}
+
+#to-top {
+  font-size: 1em;
+  position: fixed;
+  right: 5px;
+  z-index: 1;
+  bottom: 5px;
+  display: none;
+  padding: 15px 20px;
+}
